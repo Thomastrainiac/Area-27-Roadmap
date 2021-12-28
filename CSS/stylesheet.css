@@ -3,3 +3,20 @@
     margin: 10px 0;
     display: flex;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(201, 201, 201);
+    text-align: center;
+    display: inline;
+    padding-top: 0;
+    margin: 0;
+}
+
+.footer-p {
+    color: white;
+    font-weight: 900;
+}

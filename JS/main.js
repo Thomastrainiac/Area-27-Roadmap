@@ -3,8 +3,7 @@ document.body.onload = onLoad()
 function createCard(array) {
 
     for (var index in array) {
-        var holderDiv = document.createElement("div")
-        document.body.appendChild(holderDiv)
+        var holderDiv = document.getElementById("Container")
 
         var updateText = document.createElement("h4")
         updateText.setAttribute("style", "font-weight: 900; margin-left: 90px; margin-top: 20px;")
@@ -47,6 +46,12 @@ function createCard(array) {
             } else if (obj.status == 2) {
                 statusContainer.innerHTML = "<span style='color: White; font-weight: 900;'>Live</span>"
                 statusContainer.setAttribute("style", `${stylepreset} background-color:rgb(42, 235, 68); padding-left: 103px; padding-right: 103px;`)
+            } else if (obj.status == 3) {
+                statusContainer.innerHTML = "<span style='color: White; font-weight: 900;'>Testing Phase</span>"
+                statusContainer.setAttribute("style", `${stylepreset} background-color:rgb(179, 131, 0); padding-left: 65px; padding-right: 65px;`)
+            } else if (obj.status == 4) {
+                statusContainer.innerHTML = "<span style='color: White; font-weight: 900;'>Concept Phase</span>"
+                statusContainer.setAttribute("style", `${stylepreset} background-color:rgb(95, 27, 191);`)
             }
             containerDiv.appendChild(statusContainer)
         })
@@ -54,7 +59,7 @@ function createCard(array) {
 
     var spacerDivTwo = document.createElement("div")
     spacerDivTwo.setAttribute("style", "padding-top: 20px;")
-    document.body.appendChild(spacerDivTwo)
+    holderDiv.appendChild(spacerDivTwo)
 }
 
 async function onLoad() {
